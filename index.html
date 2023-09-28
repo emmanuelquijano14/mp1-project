@@ -5,11 +5,67 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="cheatsheet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
+  <div id="myModal" class="modal">
+    <div>
+      <span class="close">&times;</span>
+      </div>
+      <div class="bd-example-snippet bd-code-snippet">
+        <div class="bd-example m-0 border-0">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label for="validationServer01" class="form-label">First name</label>
+            <input type="text" class="form-control" id="validationServer01" value="" required="" fdprocessedid="8rj8eg">
+          </div>
+          <div class="col-md-4">
+            <label for="validationServer02" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="validationServer02" value="" required="" fdprocessedid="vvb4b">
+          </div>
+          <div class="col-md-4">
+            <label for="validationServerUsername" class="form-label">Fb name</label>
+            <div class="input-group has-validation">
+              <input type="text" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required="" fdprocessedid="nkzahg">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer03" class="form-label">"For Rent"Address</label>
+            <input type="text" class="form-control" id="validationServer03" required="" fdprocessedid="dhqk36">
+          </div>
+          <div class="col-md-3">
+            <label for="validationServer04" class="form-label">Unit type</label>
+            <input type="text" class="form-control" id="validationServer04" required="" fdprocessedid="lcodcm">
+            <!-- <select class="form-select" id="validationServer04" required="" fdprocessedid="lcodcm">
+              <option selected="" disabled="" value="">Choose...</option>
+              <option>...</option>
+            </select> -->
+          </div>
+          <div class="col-md-3">
+            <label for="validationServer05" class="form-label">Fb post-link</label>
+            <input type="text" class="form-control" id="validationServer05" required="" fdprocessedid="jhnrvf">
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required="">
+              <label class="form-check-label" for="invalidCheck3">
+                Agree to terms and conditions
+                "submitted properties will be validated via fb post before listing in the website"
+              </label>
+            </div>
+            </div>
+          <div class="col-12">
+            <a href="#Home"><button class="btn btn-primary" type="submit" fdprocessedid="pzq5pl">Submit form</button></a>
+          </div>
+        </form>
+        </div>
+    </div>
+  </div>
+  
     <nav id="#Home"  class="navbar navbar-expand-lg navbar-dark bg-primary fixednav">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,18 +123,14 @@
       <div class="col-md-6 p-lg-5 mx-auto my-5">
         <h1 class="display-3 fw-bold">List your properties for rent</h1>
         <h3 class="fw-normal text-muted mb-3">make it easy for your property to be seen</h3>
-        <div class="d-flex gap-3 justify-content-center lead fw-normal">
-          <!-- <a class="icon-link" href="binan.html">
-            Look for Rent -->
-          </a>
-          <a class="icon-link" href="#">
-            List a "For Rent"
-          </a>
-        </div>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button id="myBtn2" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable" fdprocessedid="z4bqq5">
+          -List your "For-Rent" here-
+        </button>
       </div>
-      <div class="product-device shadow-sm d-none d-md-block"></div>
-      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
     </div>
+    </div>
+    
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
           <div class="col-md-4 d-flex align-items-center">
@@ -93,7 +145,7 @@
       </div>
       <script>
         // Get the button
-        let mybutton = document.getElementById("myBtn");
+        let mybutton = document.getElementById("myBtn2");
         
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {scrollFunction()};
@@ -111,6 +163,31 @@
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
         }
-        </script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn2");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+</script>
 </body>
 </html>
