@@ -44,13 +44,15 @@
             </form> -->
           </div>
         </div>
-        </nav>
+        </nav>  
     <div class="bd-example-snippet bd-code-snippet">
         <div class="bd-example m-0 border-0">
             <img src="1.png" class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#868e96"></rect>
         </div>
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Unit Type.." title="Type in a name">
-            
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"></path>
+        </svg></button>   
         <div class="bd-example-snippet bd-code-snippet binan-bg"><div class="bd-example m-0 border-0">
             <table id="myTable"class="table table-striped">
               <thead>
@@ -94,7 +96,39 @@
               </tr>
               </tbody>
             </table>
-            <script>
+            </div></div>
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                  <div class="col-md-4 d-flex align-items-center">
+                    <span class="mb-3 mb-md-0 text-body-secondary">RENTSPACE © 2023 Company, Inc</span>
+                  </div>
+              
+                  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-body-secondary" href="#"><img src="IG.png" class="bi" width="24" height="24"><use xlink:href="#twitter"></use></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" href="#"><img src="fb.png" class="bi" width="24" height="24"><use xlink:href="#instagram"></use></a></li>
+                  </ul>
+                </footer>
+              </div>
+              <script>
+                // Get the button
+                let mybutton = document.getElementById("myBtn");
+                
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                  } else {
+                    mybutton.style.display = "none";
+                  }
+                }
+                
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                }
                 function myFunction() {
                   var input, filter, table, tr, td, i, txtValue;
                   input = document.getElementById("myInput");
@@ -114,18 +148,5 @@
                   }
                 }
                 </script>
-            </div></div>
-            <div class="container">
-                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                  <div class="col-md-4 d-flex align-items-center">
-                    <span class="mb-3 mb-md-0 text-body-secondary">RENTSPACE © 2023 Company, Inc</span>
-                  </div>
-              
-                  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3"><a class="text-body-secondary" href="#"><img src="IG.png" class="bi" width="24" height="24"><use xlink:href="#twitter"></use></a></li>
-                    <li class="ms-3"><a class="text-body-secondary" href="#"><img src="fb.png" class="bi" width="24" height="24"><use xlink:href="#instagram"></use></a></li>
-                  </ul>
-                </footer>
-              </div>
 </body>
 </html>
