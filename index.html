@@ -52,6 +52,48 @@
               </label>
             </div>
             </div>
+            <div id="myModal" class="modal">
+              <div>
+                <span class="close">&times;</span>
+                </div>
+                <div class="bd-example-snippet bd-code-snippet">
+                  <div class="bd-example m-0 border-0">
+                  <form class="row g-3">
+                    <div class="col-md-4">
+                      <label for="validationServer01" class="form-label">First name</label>
+                      <input type="text" class="form-control" id="validationServer06" value="" required="" fdprocessedid="firstn">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="validationServer02" class="form-label">Last name</label>
+                      <input type="text" class="form-control" id="validationServer07" value="" required="" fdprocessedid="lastn">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="validationServerUsername" class="form-label">Fb name</label>
+                      <div class="input-group has-validation">
+                        <input type="text" class="form-control" id="validationServerUsername2" aria-describedby="inputGroupPrepend3" required="" fdprocessedid="fbname">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationServer03" class="form-label">"For Rent"Address</label>
+                      <input type="text" class="form-control" id="validationServer0" required="" fdprocessedid="lookf">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationServer04" class="form-label">Unit type</label>
+                      <input type="text" class="form-control" id="validationServer09" required="" fdprocessedid="unitty">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationServer05" class="form-label">Fb post-link</label>
+                      <input type="text" class="form-control" id="validationServer10" required="" fdprocessedid="fbpost">
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck4" required="">
+                        <label class="form-check-label" for="invalidCheck4">
+                          Agree to terms and conditions
+                          "submitted properties will be validated via fb post before listing in the website"
+                        </label>
+                      </div>
+                      </div>
             
           <div class="col-12">
             <a href="#Home"><button class="btn btn-primary" type="submit" fdprocessedid="pzq5pl">Submit form</button></a>
@@ -171,6 +213,31 @@
 
         // Get the button that opens the modal
         var btn = document.getElementById("myBtn2");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        // Get the modal
+        var modal = document.getElementById("myModal2");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn3");
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
