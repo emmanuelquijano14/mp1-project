@@ -9,12 +9,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav id="#Home"  class="navbar navbar-expand-lg navbar-dark bg-primary fixednav">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#list">List Here</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Location
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="binan.html">Binan</a></li>  
+                  <li><a class="dropdown-item" href="cabuyao.html">Cabuyao</a></li>
+                  <li><a class="dropdown-item" href="calamba.html">Calamba</a></li>
+                  <li><a class="dropdown-item" href="sanpedro.html">San Pedro</a></li>
+                  <li><a class="dropdown-item" href="cavite.html">Cavite</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="bd-example m-0 border-0">
+        <img src="TENANT.png" class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#868e96"></rect>
+        </div>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Location.." title="Type in a name">
+    <div id="myTable">
     <div class="row text-left">
-        <div class="col-md-4 themed-grid-col">BIÑAN-Apartment/House</div>
+        <div class="col-md-4 themed-grid-col">BIÑAN-Apartment</div>
         <div class="col-md-4 themed-grid-col2">JennyLyn Endaya Layag</div>
         <div class="col-md-4 themed-grid-col2 td-link"><a href="https://www.facebook.com/groups/1367941263735444/permalink/1602455066950728/">
-            https://www.facebook.com/groups/1367941263735444/permalink/1602455066950728/</a></div>
-    </div>
+            https://www.facebook.com/groups/1367941263735444/permalink/1602455066950728/</a></div>    
+        </div>
     <div class="row text-left">
         <div class="col-md-4 themed-grid-col">CABUYAO-House</div>
         <div class="col-md-4 themed-grid-col2">Phai Apucay</div>
@@ -51,5 +88,26 @@
         <div class="col-md-4 themed-grid-col2 td-link"><a href="https://www.facebook.com/groups/2606132332937537/permalink/3376949535855809/">
             hhttps://www.facebook.com/groups/2606132332937537/permalink/3376949535855809/</a></div>
     </div>
+    </div>
+    <script>
+                function myFunction() {
+                  var input, filter, table, tr, td, i, txtValue;
+                  input = document.getElementById("myInput");
+                  filter = input.value.toUpperCase();
+                  table = document.getElementById("myTable");
+                  div = table.getElementsByTagName("div");
+                  for (i = 0; i < tr.length; i++) {
+                    div = tr[i].getElementsByTagName("div")[0];
+                    if (div) {
+                      txtValue = td.textContent || td.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                      } else {
+                        tr[i].style.display = "none";
+                      }
+                    }       
+                  }
+                }
+    </script>
 </body>
 </html>
