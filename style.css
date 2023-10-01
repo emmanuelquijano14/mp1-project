@@ -64,6 +64,19 @@
 .color{
   color:white;
 }
+.themed-grid-col{
+  border:1px solid black;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: rgba(9, 9, 9, 0.129);
+  font-weight: bolder;
+}
+.themed-grid-col2{
+  border:1px solid blue;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: rgba(0, 0, 255, 0.129)
+}
 
   
   
